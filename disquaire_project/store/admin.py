@@ -39,7 +39,7 @@ class BookingInline(admin.TabularInline, AdminURLMixin):
     verbose_name = "Réservation"
     verbose_name_plural = "Réservations"
 
-    def has_add_permission(self, request):
+    def has_add_permission(self, request, obj=None):
         return False
 
     def album_link(self, booking):
